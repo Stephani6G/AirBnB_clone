@@ -47,7 +47,10 @@ class BaseModel:
         """
 
         obj_dict = {}
+        for key in self.__dict__:
+            if key == "created_at" or key == "updated_at":
+                obj_dict[key] = self.__dict__[key].isoformat()
+            else:
+                obj_dict[key] = self.__dict__[key]
         obj_dict['__class__'] = self.__class__.__name__
-        obj_dict['created_at'] = self.created_at.isoformat()
-        obj_dict['updated_at'] = self.updated_at.isoformat()
         return obj_dict
