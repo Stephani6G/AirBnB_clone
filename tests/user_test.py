@@ -1,4 +1,3 @@
-test_user.py
 #!/usr/bin/python3
 
 """module that defines unittests for models/user.py.

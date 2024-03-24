@@ -1,4 +1,3 @@
-test_state.py
 #!/usr/bin/python3
 
 """module that defines unittests for models/state.py.
